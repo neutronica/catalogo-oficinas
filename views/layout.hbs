@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{titulo_pagina}}</title>
+    <!-- Bootstrap (instalacao offline, arquivos na pasta public/stylesheets/bootstrap e public/javascripts/bootstrap) -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="container mt-3 mb-3">
+      <!-- menu superior: nav do tipo Fill and Justify -->
+      <ul class="nav nav-pills nav-fill nav-justified mb-3">
+        <li class="nav-item">
+          <a class="nav-link {{#if menu_inicio}}active{{/if}}" href="/">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if menu_sobre}}active{{/if}}" href="/sobre">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if menu_nova}}active{{/if}}" href="/oficina/cria">Nova Oficina</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if menu_pesquisa}}active{{/if}}" href="/oficina/pesquisa">Pesquisa</a>
+        </li>
+      </ul>
+
+      {{{body}}}
+    </div>
+
+    <script src="/javascripts/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
